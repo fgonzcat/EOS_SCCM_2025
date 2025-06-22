@@ -20,5 +20,4 @@ With the goal in mind of making WDM computations more reliable and efficient, we
 Download the code <a href="http://militzer.berkeley.edu/FPEOS/" target="_blank">here</a>.
 
 
-<img src="http://militzer.berkeley.edu/FPEOS/figures/FPEOS_mixture_P_T_plot_maxComp_10.png" alt="Alt text" width="600">
-
+![](FPEOS_mixture_P_T_plot_maxComp_10.png)
