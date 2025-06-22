@@ -17,3 +17,5 @@ This is code that allows to fit [Birch-Murnaghan](https://en.wikipedia.org/wiki/
 
 
 Download the code <a href="https://github.com/fgonzcat/fit_EOS" target="_blank">here</a>.
+
+![](fit_EOS_screenshot.png)
