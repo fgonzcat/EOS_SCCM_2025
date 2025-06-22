@@ -2,6 +2,7 @@
 
 Download the Master class presentation [here](https://docs.google.com/presentation/d/1UGDTo-izGF2HEN3sFq6fpniGT5ZpnwoA-QPxdvEn-Hg/edit?usp=sharing).
 
+![](logo.png)
 
 ## Citations
 
