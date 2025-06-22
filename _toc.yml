@@ -6,4 +6,4 @@ root: intro
 chapters:
 - file: presentation
 - file: fit_EOS
-- file: notebooks
+- file: FPEOS
