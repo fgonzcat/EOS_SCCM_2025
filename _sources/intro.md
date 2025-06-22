@@ -1,11 +1,16 @@
-# Welcome to your Jupyter Book
+# Master Class: Materials Equations of State Development
+## Computational methods for materials Equations of State development
+APS SCCM Meeting 2025: 24th International Conference on the Science of Compression in Condensed Matter
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
 
-Check out the content pages bundled with this sample book to see more.
+## Authors:
+- Felipe J Gonzalez (University of California, Berkeley)
+- Burkhard Militzer (University of California, Berkeley)
+- Daniel Rehn (Los Alamos National Laboratory)
+
+
+Equations of state (EOS) are important for a wide variety of applications. The EOS development masterclass will focus on computational approaches for informing on materials EOS, including the use of density functional theory (DFT) methods to calculate materials properties and the use of optimization and uncertainty quantification techniques to fit physics-based materials models to data. The class assumes a basic knowledge of thermodynamics and quantum mechanics, and is intended for advanced undergraduate students, graduate students, and beyond. The masterclass will be divided into two parts: the first discussing DFT methods to generate data, and the second focusing on the use of optimization and uncertainty quantification techniques to fit both DFT and experimental data. The class will be partly interactive with examples that can be run using Python on a laptop.
+
 
 ```{tableofcontents}
 ```
