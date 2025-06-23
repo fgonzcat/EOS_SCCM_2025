@@ -174,6 +174,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="presentation.html">Presentation</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">fit_EOS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="FPEOS.html">FPEOS</a></li>
+
 </ul>
 
     </div>
@@ -369,6 +370,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-the-code">Download the code</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fitting-equations-of-state-using-vinet-birch-murnaghan-log-log-to-p-v-data">Fitting Equations of State using Vinet / Birch-Murnaghan / log-log to P-V data</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#birch-murnhagan-eos">Birch-Murnhagan EOS</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-normalized-pressure-eos-f-f">The normalized pressure EOS: <span class="math notranslate nohighlight">\(F-f\)</span></a></li>
@@ -406,8 +408,11 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="fit-eos">
 <h1>fit_EOS<a class="headerlink" href="#fit-eos" title="Permalink to this heading">#</a></h1>
 <p>This is code that allows to fit <a class="reference external" href="https://en.wikipedia.org/wiki/Birch%E2%80%93Murnaghan_equation_of_state">Birch-Murnaghan</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/Rose%E2%80%93Vinet_equation_of_state">Vinet</a>, and polynomial log-log functional forms to Pressure-Volume (<span class="math notranslate nohighlight">\(P\text{-}V\)</span>) data provided by the user. The code uses a the <code class="docutils literal notranslate"><span class="pre">curve_fit</span></code> from <code class="docutils literal notranslate"><span class="pre">scipy.optimize</span></code> in combination with <code class="docutils literal notranslate"><span class="pre">InterpolatedUnivariateSpline</span></code> from <code class="docutils literal notranslate"><span class="pre">scipy.interpolate</span></code>. The code supports error bars <span class="math notranslate nohighlight">\(\delta P_i\)</span> in the pressure <span class="math notranslate nohighlight">\(P_i\)</span>, which changes the weights in the fitting to <span class="math notranslate nohighlight">\(w_i=1/\delta P_i\)</span>.  The output provides the fitting parameters for each of the functional forms with their respective errors from the covariance matrix. Different indicators are provided to determine which fit worked better, including RMSE, standard deviation of the residuals, <span class="math notranslate nohighlight">\(R^2\)</span>, and <span class="math notranslate nohighlight">\(\chi^2\)</span>  (see below).</p>
+<section id="download-the-code">
+<h2>Download the code<a class="headerlink" href="#download-the-code" title="Permalink to this heading">#</a></h2>
 <p>Download the code <a href="https://github.com/fgonzcat/fit_EOS" target="_blank">here</a>.</p>
 <p><img alt="" src="_images/fit_EOS_screenshot.png" /></p>
+</section>
 <section id="fitting-equations-of-state-using-vinet-birch-murnaghan-log-log-to-p-v-data">
 <h2>Fitting Equations of State using Vinet / Birch-Murnaghan / log-log to P-V data<a class="headerlink" href="#fitting-equations-of-state-using-vinet-birch-murnaghan-log-log-to-p-v-data" title="Permalink to this heading">#</a></h2>
 <section id="birch-murnhagan-eos">
@@ -781,6 +786,7 @@ Integral from P1[GPa]= 390.00 to P_Target[GPa]= 400.00:  ∆G[eV]= 32.2832973041
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-the-code">Download the code</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fitting-equations-of-state-using-vinet-birch-murnaghan-log-log-to-p-v-data">Fitting Equations of State using Vinet / Birch-Murnaghan / log-log to P-V data</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#birch-murnhagan-eos">Birch-Murnhagan EOS</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-normalized-pressure-eos-f-f">The normalized pressure EOS: <span class="math notranslate nohighlight">\(F-f\)</span></a></li>
