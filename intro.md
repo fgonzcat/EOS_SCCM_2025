@@ -1,5 +1,5 @@
 # Master Class: Materials Equations of State Development
-## Computational methods for materials Equations of State development
+## [Computational methods for materials Equations of State development](https://schedule.aps.org/sccm/2025/events/B06)
 APS SCCM Meeting 2025: 24th International Conference on the Science of Compression in Condensed Matter
 
 
