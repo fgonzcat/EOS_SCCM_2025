@@ -23,8 +23,9 @@ Download the code <a href="http://militzer.berkeley.edu/FPEOS/" target="_blank">
 ![](FPEOS_mixture_P_T_plot_maxComp_10.png)
 
 ## Download an FPEOS presentation slides by Burkhard Militzer
-Download the presentation <a href="http://militzer.berkeley.edu/presentations/Militzer_LLNL-Japan_seminar.pdf" target="_blank">here</a>.
+Download a presentation about FPEOS  <a href="http://militzer.berkeley.edu/presentations/Militzer_LLNL-Japan_seminar.pdf" target="_blank">here</a>.
 
+![](FPEOS_Militzer_presentation_slides_cover.png)
 
 # FPEOS: First-Principles Equation of State Code
 
