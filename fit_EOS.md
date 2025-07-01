@@ -58,6 +58,7 @@ The Vinet EOS is given by
 $$P(V)= 3K_0 \left(\frac{1.0-\eta}{\eta^2}\right) e^{ \frac{3}{2}(K_0'-1)(1-\eta) };\qquad \eta=(V/V_0)^{1/3}$$
 
 I also provide a new log-log polynomial EOS fit:
+
 $$\ln V = a + b\ln P + c(\ln P)^2 + d(\ln P)^3  \Rightarrow V(P) = {\rm e}^aP^{b+c\ln P+d(\ln P)^2}.$$
 
 Further reading:
