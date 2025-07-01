@@ -5,7 +5,7 @@ APS SCCM Meeting 2025: 24th International Conference on the Science of Compressi
 
 
 ## Authors:
-- Felipe J Gonzalez (University of California, Berkeley)
+- Felipe J Gonzalez (University of California, Berkeley) ([https://www.gnm.cl/fgonzalez/](https://www.gnm.cl/fgonzalez/))
 - Burkhard Militzer (University of California, Berkeley)
 - Daniel Rehn (Los Alamos National Laboratory)
 
