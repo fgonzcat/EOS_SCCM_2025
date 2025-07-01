@@ -13,7 +13,7 @@ kernelspec:
 ---
 
 # fit_EOS
-This is code that allows to fit [Birch-Murnaghan](https://en.wikipedia.org/wiki/Birch–Murnaghan_equation_of_state), [Vinet](https://en.wikipedia.org/wiki/Rose–Vinet_equation_of_state), and polynomial log-log functional forms to Pressure-Volume ($P\text{-}V$) data provided by the user. The code uses a the ```curve_fit``` from ```scipy.optimize``` in combination with ```InterpolatedUnivariateSpline``` from ```scipy.interpolate```. The code supports error bars $\delta P_i$ in the pressure $P_i$, which changes the weights in the fitting to $w_i=1/\delta P_i$.  The output provides the fitting parameters for each of the functional forms with their respective errors from the covariance matrix. Different indicators are provided to determine which fit worked better, including RMSE, standard deviation of the residuals, $R^2$, and $\chi^2$  (see below).
+This code fits [Birch-Murnaghan](https://en.wikipedia.org/wiki/Birch–Murnaghan_equation_of_state), [Vinet](https://en.wikipedia.org/wiki/Rose–Vinet_equation_of_state), and polynomial log-log functional forms to Pressure-Volume ($P\text{-}V$) data provided by the user. The code uses libraries from python such as ```curve_fit``` from ```scipy.optimize``` in combination with ```InterpolatedUnivariateSpline``` from ```scipy.interpolate```. The code supports error bars $\delta P_i$ for the pressures $P_i$, which changes the weights in the fitting process to $w_i=1/\delta P_i$. It also supports error bars $\delta V_i$ in the volumes $V_i$ and propagates the errors accordingly for the fits. The output provides the fitting parameters for each of the functional forms with their respective errors from the covariance matrix. Different indicators for the resulting errors are provided to determine which fit worked better, including RMSE, standard deviation of the residuals, $R^2$, and $\chi^2$  (see below).
 
 ## Download the code
 Download the code <a href="https://github.com/fgonzcat/fit_EOS" target="_blank">here</a>.
@@ -58,6 +58,7 @@ The Vinet EOS is given by
 $$P(V)= 3K_0 \left(\frac{1.0-\eta}{\eta^2}\right) e^{ \frac{3}{2}(K_0'-1)(1-\eta) };\qquad \eta=(V/V_0)^{1/3}$$
 
 I also provide a new log-log polynomial EOS fit:
+
 $$\ln V = a + b\ln P + c(\ln P)^2 + d(\ln P)^3  \Rightarrow V(P) = {\rm e}^aP^{b+c\ln P+d(\ln P)^2}.$$
 
 Further reading:
