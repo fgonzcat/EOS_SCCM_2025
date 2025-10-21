@@ -375,10 +375,11 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#birch-murnhagan-eos">Birch-Murnhagan EOS</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-normalized-pressure-eos-f-f">The normalized pressure EOS: <span class="math notranslate nohighlight">\(F-f\)</span></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vinet-eos">Vinet EOS</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reported-errors">Reported Errors:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpreting-reduced-chi-2">Interpreting Reduced <span class="math notranslate nohighlight">\(\chi^2\)</span>:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#log-log-eos">Log-log EOS</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reported-errors">Reported Errors:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interpreting-reduced-chi-2">Interpreting Reduced <span class="math notranslate nohighlight">\(\chi^2\)</span>:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#executing-the-code">Executing the code</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#help">Help</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-equation-of-state-of-water-at-7000-k">Example: Equation of state of water at 7000 K</a></li>
@@ -452,16 +453,20 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[P(V)= 3K_0 \left(\frac{1.0-\eta}{\eta^2}\right) e^{ \frac{3}{2}(K_0'-1)(1-\eta) };\qquad \eta=(V/V_0)^{1/3}\]</div>
 <p>I also provide a new log-log polynomial EOS fit:</p>
-<div class="math notranslate nohighlight">
-\[\ln V = a + b\ln P + c(\ln P)^2 + d(\ln P)^3  \Rightarrow V(P) = {\rm e}^aP^{b+c\ln P+d(\ln P)^2}.\]</div>
 <p>Further reading:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://doi.org/10.1103%2Fphysrevb.35.1945">Vinet, Pascal, et al. “Temperature effects on the universal equation of state of solids.” Physical Review B 35.4 (1987): 1945.</a></p></li>
 <li><p><a class="reference external" href="https://link.springer.com/article/10.1007/BF01449185">Stacey, F. D., B. J. Brennan, and R. D. Irvine. “Finite strain theories and comparisons with seismological data.” Geophysical surveys 4 (1981): 189-232.</a></p></li>
 </ul>
 </section>
+<section id="log-log-eos">
+<h3>Log-log EOS<a class="headerlink" href="#log-log-eos" title="Permalink to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\ln V = a + b\ln P + c(\ln P)^2 + d(\ln P)^3  \Rightarrow V(P) = {\rm e}^aP^{b+c\ln P+d(\ln P)^2}.\]</div>
+</section>
+</section>
 <section id="reported-errors">
-<h3>Reported Errors:<a class="headerlink" href="#reported-errors" title="Permalink to this heading">#</a></h3>
+<h2>Reported Errors:<a class="headerlink" href="#reported-errors" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>residuals = <span class="math notranslate nohighlight">\(P_{\rm fit}(V) - P\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(\sigma\)</span> = standard deviation of residuals</p></li>
@@ -472,14 +477,13 @@ document.write(`
 </ul>
 </section>
 <section id="interpreting-reduced-chi-2">
-<h3>Interpreting Reduced <span class="math notranslate nohighlight">\(\chi^2\)</span>:<a class="headerlink" href="#interpreting-reduced-chi-2" title="Permalink to this heading">#</a></h3>
+<h2>Interpreting Reduced <span class="math notranslate nohighlight">\(\chi^2\)</span>:<a class="headerlink" href="#interpreting-reduced-chi-2" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\chi^2_{\nu} \approx 1\)</span>: model is consistent with data within error bars</p></li>
 <li><p><span class="math notranslate nohighlight">\(\chi^2_{\nu} &lt; 1\)</span>: possible overfitting or overestimated uncertainties</p></li>
 <li><p><span class="math notranslate nohighlight">\(\chi^2_{\nu} &gt; 1\)</span>: model may be inadequate or error bars underestimated</p></li>
 <li><p>Among multiple models, the one with <span class="math notranslate nohighlight">\(\chi^2_{\nu}\)</span> closest to 1 is generally preferred.</p></li>
 </ul>
-</section>
 </section>
 <section id="executing-the-code">
 <h2>Executing the code<a class="headerlink" href="#executing-the-code" title="Permalink to this heading">#</a></h2>
@@ -519,7 +523,7 @@ by Felipe Gonzalez [Berkeley 05-19-2023]
 <section id="example-equation-of-state-of-water-at-7000-k">
 <h3>Example: Equation of state of water at 7000 K<a class="headerlink" href="#example-equation-of-state-of-water-at-7000-k" title="Permalink to this heading">#</a></h3>
 <p>Consider you have the EOS of water tabulated in a plain text file, <code class="docutils literal notranslate"><span class="pre">EOS_H2O_liq_7000K.dat</span></code>, and volumes, pressures, and pressure errors are in colums 6, 12, and 13, respectively:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat EOS_H2O_liq_7000K.dat
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>EOS_H2O_liq_7000K.dat
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">H2O001</span>	<span class="mi">72</span><span class="n">O</span><span class="o">+</span><span class="mi">144</span><span class="n">H</span>	<span class="n">N</span><span class="o">=</span>	<span class="mi">216</span>	<span class="n">V</span><span class="p">[</span><span class="n">A</span><span class="o">^</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span>	<span class="mf">615.399662</span>	<span class="n">rho</span><span class="p">[</span><span class="n">g</span><span class="o">/</span><span class="n">cc</span><span class="p">]</span><span class="o">=</span>	<span class="mf">3.5</span>	<span class="n">T</span><span class="p">[</span><span class="n">K</span><span class="p">]</span><span class="o">=</span>	<span class="mi">7000</span>	<span class="n">P</span><span class="p">[</span><span class="n">GPa</span><span class="p">]</span><span class="o">=</span>	<span class="mf">248.553</span>	<span class="mf">0.448</span>	<span class="n">E</span><span class="p">[</span><span class="n">Ha</span><span class="p">]</span><span class="o">=</span>	<span class="o">-</span><span class="mf">14.990529</span>	<span class="mf">0.064178</span>	<span class="n">t</span><span class="o">=</span>	<span class="mf">0.5</span>	<span class="mf">0.4</span>
@@ -538,13 +542,13 @@ by Felipe Gonzalez [Berkeley 05-19-2023]
 </section>
 <section id="executing-the-code-with-an-eos">
 <h3>Executing the code with an EOS<a class="headerlink" href="#executing-the-code-with-an-eos" title="Permalink to this heading">#</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./fit_EOS.py EOS_H2O_liq_7000K.dat <span class="m">6</span> <span class="m">12</span> <span class="m">13</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./fit_EOS.py<span class="w"> </span>EOS_H2O_liq_7000K.dat<span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">12</span><span class="w"> </span><span class="m">13</span>
 </pre></div>
 </div>
 <blockquote>
 <div><p>[!IMPORTANT]
 If you have error bars <span class="math notranslate nohighlight">\(\delta V_i\)</span> in the measured volumes <span class="math notranslate nohighlight">\(V_i\)</span> in addition to the error bars in the pressure (<span class="math notranslate nohighlight">\(\delta P_i\)</span>), you can pass them as an additional column (say, column 7) after the volume column. These error bars will be propagated accordingly in the <span class="math notranslate nohighlight">\(F-f\)</span> fit.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./fit_EOS.py EOS_H2O_liq_7000K.dat <span class="m">6</span> <span class="m">7</span> <span class="m">12</span> <span class="m">13</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./fit_EOS.py<span class="w"> </span>EOS_H2O_liq_7000K.dat<span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">7</span><span class="w"> </span><span class="m">12</span><span class="w"> </span><span class="m">13</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -588,7 +592,7 @@ If you have error bars <span class="math notranslate nohighlight">\(\delta V_i\)
 <section id="volume-at-p-text-target">
 <h2>Volume at <span class="math notranslate nohighlight">\(P_{\text{Target}}\)</span><a class="headerlink" href="#volume-at-p-text-target" title="Permalink to this heading">#</a></h2>
 <p>Adding a target pressure</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./fit_EOS.py EOS_H2O_liq_7000K.dat <span class="m">6</span> <span class="m">12</span> <span class="m">13</span> --PTarget <span class="m">400</span>.0 --noplots --BM4
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./fit_EOS.py<span class="w"> </span>EOS_H2O_liq_7000K.dat<span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">12</span><span class="w"> </span><span class="m">13</span><span class="w"> </span>--PTarget<span class="w"> </span><span class="m">400</span>.0<span class="w"> </span>--noplots<span class="w"> </span>--BM4
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>Volume at P_Target
@@ -604,7 +608,7 @@ PBest[GPa]=     377.5
 <section id="delta-g-int-p-1-p-rm-target-v-p-dp-g-p-rm-target-g-p-1">
 <h2><span class="math notranslate nohighlight">\(\Delta G=\int_{P_1}^{P_{\rm Target}} V(P)dP = G(P_{\rm Target})- G(P_1)\)</span><a class="headerlink" href="#delta-g-int-p-1-p-rm-target-v-p-dp-g-p-rm-target-g-p-1" title="Permalink to this heading">#</a></h2>
 <p>As you can see above, providing the target pressure already provides the value of the integral for <span class="math notranslate nohighlight">\(\Delta G\)</span>, but the default value is <span class="math notranslate nohighlight">\(P_1= -1\)</span> GPa. To change the value of <span class="math notranslate nohighlight">\(P_1\)</span>, use <code class="docutils literal notranslate"><span class="pre">--P1</span></code> and a value (integer or float) to the right:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./fit_EOS.py EOS_H2O_liq_7000K.dat <span class="m">6</span> <span class="m">12</span> <span class="m">13</span> --PTarget <span class="m">400</span>.0 --P1 <span class="m">350</span> --BM4 
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./fit_EOS.py<span class="w"> </span>EOS_H2O_liq_7000K.dat<span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">12</span><span class="w"> </span><span class="m">13</span><span class="w"> </span>--PTarget<span class="w"> </span><span class="m">400</span>.0<span class="w"> </span>--P1<span class="w"> </span><span class="m">350</span><span class="w"> </span>--BM4<span class="w"> </span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>Volume at P_Target
@@ -623,7 +627,7 @@ Integral from P1[GPa]=  -1.00 to P_Target[GPa]= 400.00:  ∆G[eV]= 1840.26483185
 <section id="deleting-points-test-which-fit-performs-better">
 <h2>Deleting points test: which fit performs better?<a class="headerlink" href="#deleting-points-test-which-fit-performs-better" title="Permalink to this heading">#</a></h2>
 <p>Using the <code class="docutils literal notranslate"><span class="pre">--test</span></code> option, the code will remove one point from the input dataset and refit the data. Since the removed point <span class="math notranslate nohighlight">\((P_0,V_0)\)</span> contains the known volume, the fit that better predicts <span class="math notranslate nohighlight">\(V_0\)</span> for fixed <span class="math notranslate nohighlight">\(P_0\)</span> is, in principle, the most reliable. A second round of tests removing two random datapoints from the dataset is performed in order to test the consistency:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./fit_EOS.py EOS_H2O_liq_7000K.dat <span class="m">6</span> <span class="m">12</span> <span class="m">13</span>  --noplots --test
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./fit_EOS.py<span class="w"> </span>EOS_H2O_liq_7000K.dat<span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">12</span><span class="w"> </span><span class="m">13</span><span class="w">  </span>--noplots<span class="w"> </span>--test
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">****</span> <span class="n">FITTING</span> <span class="n">EOS</span> <span class="o">****</span>
@@ -707,7 +711,7 @@ Integral from P1[GPa]=  -1.00 to P_Target[GPa]= 400.00:  ∆G[eV]= 1840.26483185
 <section id="the-f-vs-f-plot">
 <h2>The <span class="math notranslate nohighlight">\(F\)</span> vs. <span class="math notranslate nohighlight">\(f\)</span> plot<a class="headerlink" href="#the-f-vs-f-plot" title="Permalink to this heading">#</a></h2>
 <p>In addition, we can display the optional plot of <span class="math notranslate nohighlight">\(F\)</span> vs. <span class="math notranslate nohighlight">\(f\)</span> plot using the <code class="docutils literal notranslate"><span class="pre">--show-F-plot</span></code>. A weighted linear interpolation of <span class="math notranslate nohighlight">\(F-f\)</span> is equivalent to a third-order Birch-Murnaghan.  A positive slope of <span class="math notranslate nohighlight">\(F(f)\)</span> means that <span class="math notranslate nohighlight">\(K_0'&gt;4\)</span>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./fit_EOS.py EOS_Au_sol_298K.dat <span class="m">5</span> <span class="m">7</span> <span class="m">2</span> <span class="m">4</span>  --merge-plots  --show-F-plot
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./fit_EOS.py<span class="w"> </span>EOS_Au_sol_298K.dat<span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">7</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">4</span><span class="w">  </span>--merge-plots<span class="w">  </span>--show-F-plot
 </pre></div>
 </div>
 <img src="https://github.com/fgonzcat/fit_EOS/blob/main/F_vs_f_plot.png?raw=true" alt="Alt text" width="600">
@@ -798,10 +802,11 @@ Integral from P1[GPa]=  -1.00 to P_Target[GPa]= 400.00:  ∆G[eV]= 1840.26483185
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#birch-murnhagan-eos">Birch-Murnhagan EOS</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-normalized-pressure-eos-f-f">The normalized pressure EOS: <span class="math notranslate nohighlight">\(F-f\)</span></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vinet-eos">Vinet EOS</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reported-errors">Reported Errors:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpreting-reduced-chi-2">Interpreting Reduced <span class="math notranslate nohighlight">\(\chi^2\)</span>:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#log-log-eos">Log-log EOS</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reported-errors">Reported Errors:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interpreting-reduced-chi-2">Interpreting Reduced <span class="math notranslate nohighlight">\(\chi^2\)</span>:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#executing-the-code">Executing the code</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#help">Help</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-equation-of-state-of-water-at-7000-k">Example: Equation of state of water at 7000 K</a></li>
@@ -854,6 +859,16 @@ By Felipe Gonzalez
   
   <div class="footer-item">
     
+<div class="extra_footer">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VDVXNS5PFX');
+</script>
+
+</div>
   </div>
   
 </div>
